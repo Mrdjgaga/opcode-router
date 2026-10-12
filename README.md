@@ -107,21 +107,6 @@ router.dispatch(&mut session, opcode, (body,)).await?;
 - 处理器都在应用 crate 内：优先直接路由，生成的 `match` 最简单、开销最低。
 - 不想扫描源文件，但需要收集多个 `impl`：使用 `linkme` 路由；它多一次启动期建表和运行时哈希查找。
 
-## 从旧项目名迁移
-
-包名已经从 `asktao_tools` 改为 `opcode-router`。Rust 代码中的默认 crate 名是 `opcode_router`：
-
-```toml
-[dependencies]
-opcode-router = { path = "path/to/opcode-router" }
-```
-
-已有项目也可以暂时保留依赖别名：
-
-```toml
-asktao_tools = { package = "opcode-router", path = "path/to/opcode-router" }
-```
-
 ## License
 
 Licensed under the MIT License.
