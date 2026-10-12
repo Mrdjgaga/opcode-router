@@ -1,0 +1,25 @@
+[package]
+name = "opcode-router"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Compile-time numeric opcode routing for synchronous and asynchronous Rust methods"
+license = "MIT"
+readme = "README.md"
+keywords = ["opcode", "router", "dispatch", "async", "proc-macro"]
+categories = ["asynchronous", "development-tools"]
+exclude = ["tests/crates/**"]
+
+[workspace]
+members = [
+    "opcode_router_macros",
+]
+default-members = [".", "opcode_router_macros"]
+resolver = "3"
+
+[dependencies]
+linkme = "0.3.37"
+opcode-router-macros = { path = "opcode_router_macros", version = "0.2.0" }
+
+[dev-dependencies]
+trybuild = "1"

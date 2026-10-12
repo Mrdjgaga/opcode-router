@@ -1,0 +1,5 @@
+error: duplicate route id `7u16`; first registered by `first`, duplicated by `second`
+  --> tests/ui/duplicate_id.rs:10:18
+   |
+10 |     #[route(id = 7u16)]
+   |                  ^^^^

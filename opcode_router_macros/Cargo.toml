@@ -1,0 +1,17 @@
+[package]
+name = "opcode-router-macros"
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Procedural macros for opcode-router"
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+glob = "0.3"
+proc-macro-crate = "3"
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full"] }

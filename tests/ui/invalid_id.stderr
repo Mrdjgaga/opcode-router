@@ -1,0 +1,5 @@
+error: route id must be an integer literal or a constant path
+ --> tests/ui/invalid_id.rs:7:18
+  |
+7 |     #[route(id = 1u16 + 2u16)]
+  |                  ^^^^^^^^^^^

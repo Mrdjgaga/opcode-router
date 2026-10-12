@@ -1,0 +1,11 @@
+error: expected attribute arguments in parentheses: #[route(...)]
+ --> tests/ui/missing_id.rs:7:7
+  |
+7 |     #[route]
+  |       ^^^^^
+
+error: routed methods require an id: #[route(id = ...)]
+ --> tests/ui/missing_id.rs:8:5
+  |
+8 |     fn missing(&mut self) {}
+  |     ^^^^^^^^^^^^^^^^^^^^^

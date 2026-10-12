@@ -1,0 +1,5 @@
+error: routed methods cannot be generic
+ --> tests/ui/invalid_signature.rs:8:15
+  |
+8 |     fn generic<T>(&mut self, _value: T) {}
+  |               ^^^
